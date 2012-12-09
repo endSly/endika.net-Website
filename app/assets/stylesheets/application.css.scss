@@ -1,0 +1,152 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ */
+ 
+@mixin rotation($angle, $x:0%, $y:0%) {
+  transform: rotate($angle);
+  transform-origin: $x $y;
+  -ms-transform: rotate($angle); /* IE 9 */
+  -ms-transform-origin: $x $y; /* IE 9 */
+  -webkit-transform: rotate($angle); /* Safari and Chrome */
+  -webkit-transform-origin: $x $y; /* Safari and Chrome */
+  -moz-transform: rotate($angle); /* Firefox */
+  -moz-transform-origin: $x $y; /* Firefox */
+  -o-transform: rotate($angle); /* Opera */
+  -o-transform-origin: $x $y; /* Opera */
+}
+
+@mixin transition($properties) {
+  transition: $properties;
+  -moz-transition: $properties; /* Firefox 4 */
+  -webkit-transition: $properties; /* Safari and Chrome */
+  -o-transition: $properties; /* Opera */
+}
+
+@font-face {
+  font-family: 'MavenProRegular';
+  src: url('/assets/maven_pro_regular-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+ 
+body {
+  background: #eeefef url('/assets/background.png') 0 0 repeat-x;
+  font-family: 'Helvetica Neue', Helvetica;
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: #333;
+  
+}
+
+a:hover {
+  text-decoration: none;
+  color: #09e;
+}
+
+#container {
+  margin: 0 100px 0 350px;
+}
+
+.content {
+  margin: 200px 0 92px;
+  min-height: 500px;
+}
+
+h1, h2, h3 {
+  font-family: 'MavenProRegular', 'Helvetica Neue', Helvetica;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+nav#menu {
+  display: block;
+  position: fixed;
+  top: 0;
+  background-color: rgb(66, 66, 66);
+  height: 80%;
+  min-height: 500px;
+  max-height: 600px;
+  width: 268px;
+  font-family: 'MavenProRegular', 'Helvetica Neue', Helvetica;
+  font-size: 20px;
+  padding-top: 40px;
+  @include rotation(9deg);
+  ul#social-icons {
+    position: absolute;
+    bottom: 60px;
+    right: 32px;
+    list-style: none;
+    padding: 0;
+    width: 148px;
+    li {
+      display: inline;
+      
+    }
+    li a {
+      margin: 8px;
+      padding: 0;
+      text-indent: -9999px;
+      display: inline-block;
+      width: 48px;
+      height: 48px;
+      opacity: 0.56;
+      @include transition(all 0.5s cubic-bezier(0.720, 0.100, 0.370, 0.900));
+      &:hover {
+        @include rotation(-16deg, 50%, 0%);
+        opacity: 0.8;
+      }
+      &#facebook {
+        background: transparent url(/assets/facebook-link.png);
+      }
+      &#twitter {
+        background: transparent url(/assets/twitter-link.png);
+      }
+      &#feed {
+        background: transparent url(/assets/feed-link.png);
+      }
+      &#github {
+        background: transparent url(/assets/github-link.png);
+      }
+    }
+  }
+  a.page-marker {
+    display: block;
+    width: 126px;
+    text-align: right;
+    color: #333;
+    background-color: rgb(162, 168, 177);
+    padding: 5px 12px;
+    margin: 12px 0 8px 120px;
+    @include transition(all 0.6s);
+    &:hover {
+      width: 152px !important;
+      color: white;
+      background-color: #09e;
+      box-shadow: 4px 6px 5px rgba(51, 51, 51, 0.6);
+    }
+  }
+}
