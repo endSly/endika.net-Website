@@ -10,14 +10,14 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
-//= require skroll
-//= require jquery.easing
+//= require jquery
+//= require_tree ./vendor
 
 $(function() {
-	skrollr.init({smoothScrolling: true});
-	
-	$('a[href*=#]').click(function(){
-	  var link = $(this).attr('href');
+  skrollr.init({smoothScrolling: true});
+
+  $('a[href*=#]').click(function(){
+    var link = $(this).attr('href');
     var scroll = $(link).offset().top - 60;
     $('html, body').animate({scrollTop:scroll},800,'easeInOutExpo');
     return false;

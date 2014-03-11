@@ -40,16 +40,15 @@
   margin: 0;
   padding: 0;
 }
- 
+
 body {
-  background: #eeefef url('/assets/background.png') 0 0 repeat-x;
+  background-color: #f9f9f9;
   font-family: 'Helvetica Neue', Helvetica;
 }
 
 a, a:visited {
   text-decoration: none;
   color: #333;
-  
 }
 
 a:hover {
@@ -86,7 +85,7 @@ nav#menu {
   display: block;
   position: fixed;
   top: 0;
-  background-color: rgb(66, 66, 66);
+  background-color: #484b5a;
   height: 80%;
   min-height: 500px;
   max-height: 600px;
@@ -104,7 +103,6 @@ nav#menu {
     width: 148px;
     li {
       display: inline;
-      
     }
     li a {
       margin: 8px;
