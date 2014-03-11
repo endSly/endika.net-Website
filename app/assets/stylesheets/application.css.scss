@@ -29,13 +29,6 @@
   -o-transition: $properties; /* Opera */
 }
 
-@font-face {
-  font-family: 'MavenProRegular';
-  src: url('/assets/maven_pro_regular-webfont.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -43,7 +36,7 @@
 
 body {
   background-color: #f9f9f9;
-  font-family: 'Helvetica Neue', Helvetica;
+  font-family: 'Titillium Pro', 'Helvetica Neue', Helvetica;
 }
 
 a, a:visited {
@@ -56,21 +49,28 @@ a:hover {
   color: #09e;
 }
 
-#container {
-  margin: 0 100px 0 350px;
+.container {
+  padding: 100px 100px 100px 350px;
+}
+
+section#contact {
+  background-color: #676c80;
+  color: white;
 }
 
 .content {
-  margin: 200px 0 92px;
   min-height: 500px;
 }
 
 h1, h2, h3 {
-  font-family: 'MavenProRegular', 'Helvetica Neue', Helvetica;
+  font-weight: 200;
 }
 
 h1 {
+  font-family: 'Josefin Slab', serif;
+  font-weight: 100;
   font-size: 48px;
+  line-height: 96px;
 }
 
 h2 {
@@ -86,11 +86,11 @@ nav#menu {
   position: fixed;
   top: 0;
   background-color: #484b5a;
+  box-shadow: 2px 1px 2px rgba(#555, 0.45);
   height: 80%;
   min-height: 500px;
   max-height: 600px;
   width: 268px;
-  font-family: 'MavenProRegular', 'Helvetica Neue', Helvetica;
   font-size: 20px;
   padding-top: 40px;
   @include rotation(9deg);
@@ -105,29 +105,27 @@ nav#menu {
       display: inline;
     }
     li a {
+      span {
+        display: none;
+      }
+      i {
+        font-size: 36px;
+      }
       margin: 8px;
-      padding: 0;
-      text-indent: -9999px;
+      padding: 6px;
+      border-radius: 24px;
+      color: #484b5a;
       display: inline-block;
-      width: 48px;
-      height: 48px;
-      opacity: 0.56;
+      width: 40px;
+      height: 40px;
+      line-height: 48px;
+      text-align: center;
+      background-color: rgba(#f9f9f9, 0.75);
+      opacity: 0.5;
       @include transition(all 0.5s cubic-bezier(0.720, 0.100, 0.370, 0.900));
       &:hover {
         @include rotation(-16deg, 50%, 0%);
         opacity: 0.8;
-      }
-      &#facebook {
-        background: transparent url(/assets/facebook-link.png);
-      }
-      &#twitter {
-        background: transparent url(/assets/twitter-link.png);
-      }
-      &#feed {
-        background: transparent url(/assets/feed-link.png);
-      }
-      &#github {
-        background: transparent url(/assets/github-link.png);
       }
     }
   }
@@ -139,6 +137,7 @@ nav#menu {
     background-color: rgb(162, 168, 177);
     padding: 5px 12px;
     margin: 12px 0 8px 120px;
+    box-shadow: 2px 1px 2px rgba(#555, 0.45);
     @include transition(all 0.6s);
     &:hover {
       width: 152px !important;
@@ -148,3 +147,50 @@ nav#menu {
     }
   }
 }
+
+#contact-form {
+  fieldset {
+    border: none;
+  }
+  input, textarea {
+    color: white;
+    font: 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+  }
+  .field {
+    input[type="text"], textarea {
+      width: 100%;
+      min-height: 36px;
+      vertical-align: middle;
+      background-color: rgba(white, 0.05);
+      color: white;
+      border-color: rgba(white, 0.3);
+      border-width: 0;
+      border-bottom-width: 1px;
+      padding: 4px;
+      @include transition(all 0.5s);
+      &:focus {
+        background-color: rgba(white, 0.15);
+        border-color: rgba(white, 0.6);
+        outline: none;
+      }
+
+    }
+    margin-bottom: 20px;
+  }
+  .action {
+    text-align: right;
+    input[type="submit"] {
+      background-color: darken(#676c80, 6%);
+      color: white;
+      border: 0;
+      padding: 12px 20px;
+      cursor: pointer;
+      @include transition(all 0.5s);
+      &:hover {
+        background-color: darken(#676c80, 12%);
+      }
+    }
+  }
+}
+
