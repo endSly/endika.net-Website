@@ -35,7 +35,8 @@
 }
 
 body {
-  background-color: #f9f9f9;
+  color: darken(#7f8c8d, 15%);
+  background-color: #f6f8f9;
   font-family: 'Titillium Pro', 'Helvetica Neue', Helvetica;
 }
 
@@ -53,9 +54,26 @@ a:hover {
   padding: 100px 100px 100px 350px;
 }
 
+section#blog {
+  background-color: #ecf0f1;
+  border-top: 2px solid darken(#ecf0f1, 3%);
+  article.item {
+    width: 50%;
+    padding: 0;
+    .article-content {
+      padding: 24px 40px 24px 0;
+    }
+  }
+}
+
+section#work {
+
+}
+
 section#contact {
   background-color: #676c80;
   color: white;
+  border-top: 2px solid darken(#676c80, 3%);
 }
 
 .content {
@@ -192,5 +210,18 @@ nav#menu {
       }
     }
   }
+}
+
+@media(max-width: 960px) {
+
+section#blog  article.item {
+  width: 100%;
+  .article-content {
+    padding: 24px 12px 24px 0;
+  }
+}
+
+
+
 }
 

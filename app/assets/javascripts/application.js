@@ -11,15 +11,8 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
+//= require jquery_ujs
+//= require turbolinks
 //= require_tree ./vendor
+//= require home
 
-$(function() {
-  skrollr.init({smoothScrolling: true});
-
-  $('a[href*=#]').click(function(){
-    var link = $(this).attr('href');
-    var scroll = $(link).offset().top - 60;
-    $('html, body').animate({scrollTop:scroll},800,'easeInOutExpo');
-    return false;
-  });
-});
