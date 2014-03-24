@@ -54,6 +54,19 @@ a:hover {
   padding: 100px 100px 100px 350px;
 }
 
+section#about {
+  background-image: url(/assets/guggenheim.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 640px;
+  p {
+    color: white;
+    text-shadow: 0 0 20px rgba(16, 16, 16, 0.9);
+  }
+}
+
 section#blog {
   background-color: #ecf0f1;
   border-top: 2px solid darken(#ecf0f1, 3%);
