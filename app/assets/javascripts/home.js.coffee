@@ -16,6 +16,7 @@ $ ->
 
   $("a.page-marker[href*=#]").click ->
     link = $(this).attr("href")
+    ga('send', 'menu-action', link)
     scroll = $(link).offset().top
     $("html, body").animate(scrollTop: scroll, 800, "easeInOutExpo")
     false
