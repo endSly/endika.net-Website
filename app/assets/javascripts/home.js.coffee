@@ -5,6 +5,11 @@
 $('#articles').masonry
   itemSelector: '.item'
 
+window.onload = ->
+  sel = document.getElementById('about')
+  window.onscroll = ->
+    posY = document.documentElement.scrollTop || window.pageYOffset
+    sel.style.backgroundPosition = "50% #{ -posY / 4 }px"
 
 $ ->
   skrollr.init smoothScrolling: true
