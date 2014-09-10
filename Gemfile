@@ -7,6 +7,7 @@ gem 'rails', '4.1.5'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+# Use postgres for database
 gem 'pg'
 
 # Use SCSS for stylesheets
@@ -30,22 +31,24 @@ gem 'jbuilder', '~> 1.2'
 # Use haml as template engine
 gem 'haml'
 
-# Do not log assets
-gem 'quiet_assets'
+group :developemnt do
+  # Do not log assets
+  gem 'quiet_assets'
 
-# Use thin as the app server
-gem 'thin'
+  # Use thin as the app server
+  gem 'thin'
+end
 
 group :production do
   # Add support for heroku
   gem 'rails_12factor'
+
+  # Use unicorn as the app server
+  gem 'unicorn'
 end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
-
-# Use unicorn as the app server
-# gem 'unicorn'
 
 # Deploy with Capistrano
 # gem 'capistrano'
