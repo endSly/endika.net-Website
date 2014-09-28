@@ -30,6 +30,9 @@ gem 'spring',        group: :development
 # Use haml as template engine
 gem 'haml-rails'
 
+# Use friendly id for slugged posts
+gem 'friendly_id'
+
 group :developemnt do
   # For better debugging
   gem 'better_errors'
