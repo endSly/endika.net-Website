@@ -28,7 +28,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 # Use haml as template engine
-gem 'haml'
+gem 'haml-rails'
 
 group :developemnt do
   # For better debugging
