@@ -1,4 +1,7 @@
 EndikaWebsite::Application.routes.draw do
+
+  resources :posts, only: [:index, :show], path: 'blog'
+
   root to: 'home#index'
 
   # The priority is based upon order of creation:
