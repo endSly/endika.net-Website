@@ -12,7 +12,9 @@ window.onload = ->
     sel.style.backgroundPosition = "50% #{ -posY / 4 }px"
 
 $ ->
-  skrollr.init smoothScrolling: true
+  skrollr.init
+    smoothScrolling: true
+    forceHeight: false
 
   $("a.page-marker[href*=#]").click ->
     link = $(this).attr("href")

@@ -14,6 +14,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require_tree ./vendor
+//= require jquery.easing
+//= require masonry.pkgd
+//= require skrollr
 //= require home
 
